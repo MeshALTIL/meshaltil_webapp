@@ -1,27 +1,31 @@
 {
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"preact": "^10.26.9",
-		"preact-iso": "^2.10.0",
-		"react-markdown": "^10.1.0"
-	},
-	"devDependencies": {
-		"@preact/preset-vite": "^2.10.2",
-		"vite": "^7.0.4"
-	},
-	"prettier": {
-		"semi": false,
-		"arrowParens": "avoid",
-		"singleQuote": true,
-		"tabWidth": 4,
-		"bracketSpacing": true,
-		"trailingComma": "none",
-		"printWidth": 100
-	}
+    "private": true,
+    "type": "module",
+    "homepage": "https://meshtasticaltil.github.io/",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "preact": "^10.26.9",
+        "preact-iso": "^2.10.0",
+        "react-markdown": "^10.1.0"
+    },
+    "devDependencies": {
+        "@preact/preset-vite": "^2.10.2",
+        "gh-pages": "^6.3.0",
+        "vite": "^7.0.4"
+    },
+    "prettier": {
+        "semi": false,
+        "arrowParens": "avoid",
+        "singleQuote": true,
+        "tabWidth": 4,
+        "bracketSpacing": true,
+        "trailingComma": "none",
+        "printWidth": 100
+    }
 }
