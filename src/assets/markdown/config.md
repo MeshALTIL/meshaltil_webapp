@@ -109,7 +109,7 @@ Make Sure to export the generated keys and keep them in a safe place.
 
 #### Notes
 
-Here is where you set your Wifi settings, if your node supports Wifi and you wish to connect to it.
+Here is where you can configure your Wifi settings, if your node supports Wifi and you wish to connect to it.
 
 Please note that this will DISABLE your node's Bluetooth connectivity! If for any reason you can't connect to your node via Wifi after enabling this option, you will have to use a serial connection (via USB) to reconfigure it.
 
