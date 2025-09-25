@@ -1,9 +1,16 @@
 import logo from '../assets/meshtastic.svg'
 import ReactMarkdown from 'react-markdown'
 
-import content from '../assets/markdown/config.md?raw'
+import config from '../assets/markdown/config.md'
+import { useEffect, useState } from 'preact/hooks'
 
 export function Home() {
+    const [content, setContent] = useState('')
+
+    useEffect(() => {
+        fetch(config).then(res => res.text().then(t => setContent(t)))
+    }, [])
+
     return (
         <div class="home">
             <div className="logo">
