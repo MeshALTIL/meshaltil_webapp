@@ -1,15 +1,24 @@
 # User
 
+#### Notes
+
 -   Set up your long name and short name as you see fit.
 
--   Enable 'Unmessageable' if the node is a repeater and not used for receiving messages.
+-   Enable 'Unmessageable' if the node is a repeater and is not used for receiving messages.
 
 ---
 
 # Device
--  Role should be CLIENT.
--  Rebroadcast mode should be ALL.
--  Time Zone for IL is  IST-2IDT,M3.4.4/26,M10.5.0
+
+#### Settings
+
+-   Role: CLIENT
+-   Rebroadcast Mode: ALL
+-   POSIX Time Zone: IST-2IDT,M3.4.4/26,M10.5.0
+
+#### Notes
+
+Israel's calender does not directly translate to POSIX time zones, this is an approximation that is good enough.
 
 ---
 
@@ -21,18 +30,24 @@ Please import our channels from the following [URL](https://meshtastic.org/e/#Ch
 
 # Position
 
+#### Settings
+
 -   Position Broadcast Interval: 900 (Optional)
-
+-   Position Flags: 811
 -   Enable 'GPS Mode' if you wish to forward your node's GPS position to the mesh.
--   Set Update Interval to something sensible, like 300 (seconds).
--   You can also play with Smart Position if desired.
--   Position Flags should be set to 811.
-
 -   Enable 'Use Fixed Position' if your node has no GPS reception, or if you want to set up a fixed position on node maps.
+
+#### Notes
+
+Please set the GPS update Interval to something sensible, between 300 to 900 (seconds).
+
+You can also try the 'Smart Position' option, which optimizes position transmissions to improve battery life.
 
 ---
 
 # LoRa
+
+#### Settings
 
 -   Modem Preset: LONG_FAST (IMPORTANT)
 
@@ -40,7 +55,7 @@ Please import our channels from the following [URL](https://meshtastic.org/e/#Ch
 
 -   Hop Limit: 7
 
--   Enable 'TX Enabled'.
+-   Enable 'TX Enabled' (IMPORTANT).
 
 -   TX Power: 30 (Optional)
 
@@ -48,13 +63,17 @@ Please import our channels from the following [URL](https://meshtastic.org/e/#Ch
 
 -   Enable 'SX126X RX Boosted Gain / RX Boosted Gain' if applicable.
 
--   Override Frequency (Mhz): Should be 919.375
+-   Override Frequency (Mhz): 919.375 (IMPORTANT)
 
--   Enable 'OK to MQTT' if you wish to connect and forward messages to other nodes outside your node's range over MQTT (Recommended).
+#### Notes
+
+Enable 'OK to MQTT' if you wish to connect and forward messages to other nodes outside your node's range over MQTT (Recommended).
 
 ---
 
 # MQTT
+
+#### Settings
 
 -   Enable 'MQTT Enabled' if you wish to connect to other nodes outside your node's range over MQTT (Recommended).
 
@@ -66,36 +85,52 @@ Please import our channels from the following [URL](https://meshtastic.org/e/#Ch
 
 -   Enable 'Encryption Enabled'.
 
--   Enable 'JSON Output Enabled' if your node's firmware supports it. NRF based nodes do not support this.
+-   Enable 'JSON Output Enabled' if your node's firmware supports it (NRF based nodes do not support this option).
 
--   Root Topic: msh/US/IL972
-
--   Enable 'Map Reporting', and 'I Agree' if you wish to transmit your node's configured location over MQTT.
+-   Root Topic: msh/US/IL972 (IMPORTANT)
 
 -   Map Reporting Interval: 3600
+
+#### Notes
+
+Enable 'Map Reporting', and 'I Agree' if you wish to transmit your node's configured location over MQTT.
 
 ---
 
 # Security
 
--   Make Sure to export the generated keys and keep them in a safe place.
+#### Notes
+
+Make Sure to export the generated keys and keep them in a safe place.
 
 ---
 
 # Network
 
--   Here you can set your wifi settings, if your node supports it and you wish to connect to your wifi. Please note that this will DISABLE Bluetooth and if you can't connect to your node via wifi, you will have to use a serial connection to your phone (via USB-C) to reconfigure it.
--   I suggest to disable UDP Config if you have 2 nodes connected to ther same network, as I found it to be unreliable.
+#### Notes
+
+Here is where you set your Wifi settings, if your node supports Wifi and you wish to connect to it.
+
+Please note that this will DISABLE your node's Bluetooth connectivity! If for any reason you can't connect to your node via Wifi after enabling this option, you will have to use a serial connection (via USB) to reconfigure it.
+
+It is recommended to disable 'UDP Config' if you have 2 or more nodes connected to ther same network, users have found it to be unreliable.
 
 ---
 
 # Display
 
--   If your node has a display, you can configure some settings here.
--   If you do not use the display constantly, setting "screen on for" to a shoret interval can save you some battery life and the display life itself.
+#### Notes
+
+Here is where you can configure your node's display, if it has one.
+
+If you do not use the display constantly, setting 'Screen on for' / 'Screen timeout' to a shorter interval can optimize battery life and the preserve the display itself.
 
 ---
 
 # Telemetry
 
--   If your device has a battery, I suggest enabling sending of telemetry, and setting the interval to 900 seconds. this will allow you to see the battery level from any node that can see your node.
+#### Notes
+
+Here is where you can configure your node's telemetry transmissions.
+
+If your node has a battery, we suggest enabling telemetry and setting the transmission interval to around 900 seconds. This will allow you (and others on the mesh) to see your node's battery level from afar.
