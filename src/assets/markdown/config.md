@@ -68,29 +68,34 @@ Please import our channels from the following [URL](https://meshtastic.org/e/#Ch
 
 -   Enable 'JSON Output Enabled' if your node's firmware supports it. NRF based nodes do not support this.
 
--   Root Topic: msh/US/Israel
+-   Root Topic: msh/US/IL972
 
 -   Enable 'Map Reporting', and 'I Agree' if you wish to transmit your node's configured location over MQTT.
 
 -   Map Reporting Interval: 3600
+
 ---
 
 # Security
 
--  Make Sure to export the generated keys and keep them in a safe place.
+-   Make Sure to export the generated keys and keep them in a safe place.
+
 ---
 
 # Network
 
--  Here you can set your wifi settings, if your node supports it and you wish to connect to your wifi. Please note that this will DISABLE Bluetooth and if you can't connect to your node via wifi, you will have to use a serial connection to your phone (via USB-C) to reconfigure it.
--  I suggest to disable UDP Config if you have 2 nodes connected to ther same network, as I found it to be unreliable.
+-   Here you can set your wifi settings, if your node supports it and you wish to connect to your wifi. Please note that this will DISABLE Bluetooth and if you can't connect to your node via wifi, you will have to use a serial connection to your phone (via USB-C) to reconfigure it.
+-   I suggest to disable UDP Config if you have 2 nodes connected to ther same network, as I found it to be unreliable.
+
 ---
 
 # Display
 
--  If your node has a display, you can configure some settings here.
--  If you do not use the display constantly, setting "screen on for" to a shoret interval can save you some battery life and the display life itself.
+-   If your node has a display, you can configure some settings here.
+-   If you do not use the display constantly, setting "screen on for" to a shoret interval can save you some battery life and the display life itself.
+
 ---
 
 # Telemetry
--  If your device has a battery, I suggest enabling sending of telemetry, and setting the interval to 900 seconds. this will allow you to see the battery level from any node that can see your node.
+
+-   If your device has a battery, I suggest enabling sending of telemetry, and setting the interval to 900 seconds. this will allow you to see the battery level from any node that can see your node.
