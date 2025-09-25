@@ -6,5 +6,5 @@ import preact from '@preact/preset-vite';
 export default defineConfig({
 	plugins: [preact()],
 	assetsInclude: ['**/*.md'],
-	base: "",
+	base: '/meshtastic_alt_il/'
 });

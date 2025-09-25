@@ -10,8 +10,8 @@ export function App() {
         <LocationProvider>
             <main>
                 <Router>
-                    <Route default component={Home} />
-                    <Route path="*" component={NotFound} />
+                    <Route path="/meshtastic_alt_il/" component={Home} />
+                    <Route default component={NotFound} />
                 </Router>
             </main>
         </LocationProvider>
