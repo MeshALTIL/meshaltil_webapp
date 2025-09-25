@@ -10,8 +10,8 @@ export function App() {
         <LocationProvider>
             <main>
                 <Router>
-                    <Route path="/" component={Home} />
-                    <Route default component={NotFound} />
+                    <Route default component={Home} />
+                    <Route path="*" component={NotFound} />
                 </Router>
             </main>
         </LocationProvider>
