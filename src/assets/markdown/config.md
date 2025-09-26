@@ -12,9 +12,9 @@
 
 #### Settings
 
--   Role: CLIENT
--   Rebroadcast Mode: ALL
--   POSIX Time Zone: IST-2IDT,M3.4.4/26,M10.5.0
+-   **Role:** CLIENT
+-   **Rebroadcast Mode:** ALL
+-   **POSIX Time Zone:** IST-2IDT,M3.4.4/26,M10.5.0
 
 #### Notes
 
@@ -32,20 +32,29 @@ Please import our channels from the following [URL](https://meshtastic.org/e/#Ch
 
 #### Settings
 
--   Position Broadcast Interval: 900 (Optional)
--   Position Flags: 811
--   Enable 'GPS Mode' if you wish to forward your node's GPS position to the mesh.
--   Enable 'Smart Broadcast' - 
-    Smart broadcast will send out your position at an increased frequency only if your location has changed enough for a position update to be useful.
--   Smart Broadcast Minimum Distance - 100 meters (Default)
-    The minimum distance in meters traveled (since the last send) before we can send a position to the mesh if smart broadcast is enabled.
--   Smart Broadcast Minimum Interval - 30 seconds (Default)
-    The minimum number of seconds (since the last send) before we can send a position to the mesh if smart broadcast is enabled.
--   Broadcast Interval - 15 minutes (Default)
-    If smart broadcast is off we should send our position this often.    
--   Enable 'Use Fixed Position'
-    Set if your node has no GPS reception, or if you want to set up a fixed position on node maps. 
-    If set, the device will generate GPS updates at the regular GPS update interval.
+-   **Position Broadcast Interval:** 900 (Optional)
+-   **Position Flags:** 811
+-   **Enable 'GPS Mode'** if you wish to forward your node's GPS position to the mesh.
+-   **Enable 'Smart Broadcast'**
+
+    -   Smart broadcast will send out your position at an increased frequency only if your location has changed enough for a position update to be useful.
+
+-   **Smart Broadcast Minimum Distance:** 100 meters (Default)
+
+    -   The minimum distance in meters traveled (since the last send) before we can send a position to the mesh if smart broadcast is enabled.
+
+-   **Smart Broadcast Minimum Interval:** 30 seconds (Default)
+
+    -   The minimum number of seconds (since the last send) before we can send a position to the mesh if smart broadcast is enabled.
+
+-   **Broadcast Interval:** 15 minutes (Default)
+
+    -   If smart broadcast is off we should send our position this often.
+
+-   **Enable 'Use Fixed Position'**
+    If your node has no GPS reception, or if you want to set up a fixed position on node maps.
+
+    -   If set, the device will generate GPS updates at the regular GPS update interval.
 
 #### Notes
 
@@ -57,49 +66,56 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 
 #### Settings
 
--   Modem Preset: LONG_FAST (IMPORTANT)
--   Region (frequency plan): US [United States] (IMPORTANT)
--   Hop Limit: 7
-    Depends on the size of the mesh network. Minimum should be no less then 3)
--   Enable 'TX Enabled' (IMPORTANT).
--   TX Power: 30 (Optional)
-    Depends on the specs of your specific device, each device has different TX power limits.
--   Frequency Slot: 70 (IMPORTANT)
--   Enable 'SX126X RX Boosted Gain / RX Boosted Gain' if applicable.
--   Override Frequency (Mhz): 919.375 (Optional)
-    The Frequency Slot [70] chooses the correct MHz frequency.
-    To override the slot setting, you can choose the frequency manually.
+-   **Modem Preset:** LONG_FAST (IMPORTANT)
+-   **Region (frequency plan):** US [United States] (IMPORTANT)
+-   **Hop Limit:** 7
+
+    -   Depending on the size of the mesh network. Minimum should be no less than 3.
+
+-   **Enable 'TX Enabled' (IMPORTANT)**
+-   **TX Power:** 30 (Optional)
+
+    -   Depending on the specs of your specific device, each device type has different TX power limits.
+
+-   **Frequency Slot:** 70 (IMPORTANT)
+-   **Enable 'SX126X RX Boosted Gain / RX Boosted Gain'** if applicable.
+-   **Override Frequency (Mhz):** 919.375 (Optional)
+
+    -   The frequency Slot [70] chooses the correct MHz frequency.
+        To override the slot setting, you can choose the frequency manually.
+
+-   **Enable 'OK to MQTT'** If you wish to connect and forward messages to other nodes outside your node's range over MQTT (Recommended).
+-   **Disable 'Ignore MQTT'** (Optional)
+
+    -   Disable to allow device to receieve messages via MQTT. Enable to ignore messages from MQTT users.
 
 #### Notes
 
-- Enable 'OK to MQTT' 
-  If you wish to connect and forward messages to other nodes outside your node's range over MQTT (Recommended).
-- Disable 'Ignore MQTT' (Optional) 
-- Disable to allow device to receieve messages via MQTT. Enable to ignore messages from MQTT users.
-- Ignore 'TLS Enabled' (Still buggy and not working with many devices)
+-   **Ignore 'TLS Enabled'** as it does not work with many devices.
+
 ---
 
 # MQTT (Module Configuraton)
 
 #### Settings
 
--   Enable 'MQTT Enabled' 
-    If you wish to connect to other nodes outside your node's range over MQTT (Recommended).
--   Address: mqtt.meshtastic.org (Meshtastic's default MQTT)
--   Username: meshdev (Leave as is)
--   Password: large4cats (Leave as is)
--   Enable 'Encryption Enabled'.
--   Enable 'JSON Output Enabled' 
-    If your node's firmware supports it (NRF based nodes do not support this option).
--   Root Topic: msh/US/IL972 (IMPORTANT)
--   Map Reporting Interval: 3600
+-   **Enable 'MQTT Enabled'** If you wish to connect to other nodes outside your node's range over MQTT (Recommended).
+-   **Address:** mqtt.meshtastic.org (Meshtastic's default MQTT)
+-   **Username:** meshdev (Leave as is)
+-   **Password:** large4cats (Leave as is)
+-   **Enable 'Encryption Enabled'**
+-   **Enable 'JSON Output Enabled'**
+    -   If your node's firmware supports it (NRF based nodes do not support this option).
+-   **Root Topic:** msh/US/IL972 (IMPORTANT)
+-   **Map Reporting Interval:** 3600
+-   **Enable 'Map Reporting', and 'I Agree'**
+    if you wish to transmit your node's configured location over MQTT.
+-   **Enable 'Proxy to client enabled'**
+    -   This lets the device use the client's (e.g. your phone's) network connection to connect to the MQTT server. If false, it uses the device's network connection which you have to enable via the network settings.
 
 #### Notes
 
-- Enable 'Map Reporting', and 'I Agree' 
-  if you wish to transmit your node's configured location over MQTT.
-- Enable 'Proxy to client enabled' 
-  Let the device use the client's (e.g. your phone's) network connection to connect to the MQTT server. If false, it uses the device's network connection which you have to enable via the network settings.
+Due to Meshtastic's MQTT zero-hop policy, we are working on setting up a dedicated MQTT server.
 
 ---
 
@@ -109,7 +125,7 @@ This is where you can regenerate or export your node's private keys.
 
 #### Notes
 
-Make Sure to export the generated keys and keep them in a safe place.
+Make sure to export the generated keys and keep them in a safe place.
 
 ---
 
