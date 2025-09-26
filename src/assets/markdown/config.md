@@ -98,6 +98,8 @@ Enable 'Map Reporting', and 'I Agree' if you wish to transmit your node's config
 
 # Security
 
+This is where you can regenerate or export your node's private keys.
+
 #### Notes
 
 Make Sure to export the generated keys and keep them in a safe place.
@@ -106,9 +108,9 @@ Make Sure to export the generated keys and keep them in a safe place.
 
 # Network
 
-#### Notes
+This is where you can configure your node's Wifi settings, if it supports Wifi and you wish to connect to it.
 
-Here is where you can configure your node's Wifi settings, if it supports Wifi and you wish to connect to it.
+#### Notes
 
 Please note that this will DISABLE your node's Bluetooth connectivity! If for any reason you can't connect to your node via Wifi after enabling this option, you will have to use a serial connection (via USB) to reconfigure it.
 
@@ -118,9 +120,9 @@ It is recommended to disable 'UDP Config' if you have 2 or more nodes connected 
 
 # Display
 
-#### Notes
+This is where you can configure your node's display, if it has one.
 
-Here is where you can configure your node's display, if it has one.
+#### Notes
 
 If you do not use the display constantly, setting 'Screen on for' / 'Screen timeout' to a shorter interval can optimize battery life and the preserve the display itself.
 
@@ -128,8 +130,8 @@ If you do not use the display constantly, setting 'Screen on for' / 'Screen time
 
 # Telemetry
 
-#### Notes
+This is where you can configure your node's telemetry transmissions.
 
-Here is where you can configure your node's telemetry transmissions.
+#### Notes
 
 If your node has a battery, we suggest enabling telemetry and setting the transmission interval to around 900 seconds. This will allow you (and others on the mesh) to see your node's battery level from afar.
