@@ -91,7 +91,7 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 
 ---
 
-# MQTT (Module Configuraton)
+# MQTT (Module Configuration)
 
 #### Settings
 
