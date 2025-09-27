@@ -1,3 +1,9 @@
+Here are the basic settings for every node in our mesh.
+
+Follow each category and set up your node to match the following settings and you should be good to go.
+
+---
+
 # User
 
 #### Settings
@@ -27,10 +33,6 @@ Israel's calender does not directly translate to POSIX time zones, this is an ap
 #### Settings
 
 Please import our channels from the following [URL](https://meshtastic.org/e/#ChUSAQAaCE9wZW5Db21tKAEwAToCCA4KMxIgApNROuCF0HivXWIfr37NLQotpk5lR4IstaO7s8ZP0gEaC2dlc2hlbWthdmVkKAEwAQoyEiAtb9BaS0k_TtWDrBCmUs7oRUXTw5l63D_ErbA5egua2xoKTWVzaEFsdC1JTCgBMAEKMxIgkX6TnnQ3LSg2y2_GJcK3tmz4xn8-Yl2IBOD71NpVJIoaC0VtcmdDb21tLUlMKAEwARIRCAE4AUADSAFQDFgXaAHABgE)
-
-#### Notes
-
-If you are using our dedicated MQTT server, disable both uplink and downlink for every channel--unless your node cannot connect directly to other nodes in the mesh. This reduces load on our server and ensures that only nodes that truly need MQTT use it.
 
 ---
 
@@ -90,50 +92,7 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
     -   The frequency Slot [70] chooses the correct MHz frequency.
         To override the slot setting, you can choose the frequency manually.
 
--   **Enable 'OK to MQTT'** If you wish to connect and forward messages to other nodes outside your node's range over MQTT (Recommended).
--   **Disable 'Ignore MQTT'** (Optional)
-
-    -   Disable to allow device to receieve messages via MQTT. Enable to ignore messages from MQTT users.
-
----
-
-# MQTT (Module Configuration)
-
-#### Settings
-
--   **Enable 'MQTT Enabled'** If you wish to connect to other nodes outside your node's range over MQTT.
--   **Address:** mesh.theldti.com (Dedicated MQTT server)
-
-    -   Only enable uplink and downlink for a channel (in the 'Channels' settings) if your node cannot connect directly to other nodes in the mesh.
-
--   **Username:** mesh
-
--   **Password:** mesh123
--   **Enable 'Encryption Enabled'**
--   **Enable 'JSON Output Enabled'**
-    -   If your node's firmware supports it (NRF based nodes do not support this option).
--   **Root Topic:** msh/US/IL972 (IMPORTANT)
--   **Map Reporting Interval:** 3600
--   **Enable 'Map Reporting', and 'I Agree'**
-    if you wish to transmit your node's configured location over MQTT.
--   **Enable 'Proxy to client enabled'**
-    -   This lets the device use the client's (e.g. your phone's) network connection to connect to the MQTT server. If false, it uses the device's network connection which you have to enable via the network settings.
-
-#### Notes
-
-**Ignore 'TLS Enabled'** as it does not work with many devices.
-
-Due to Meshtastic's MQTT zero-hop policy, we have moved on to our own dedicated MQTT server.
-
----
-
-# Security
-
-This is where you can regenerate or export your node's private keys.
-
-#### Notes
-
-Make sure to export the generated keys and keep them in a safe place.
+-   **Enable 'OK to MQTT' and Disable 'Ignore MQTT'** (IMPORTANT)
 
 ---
 
@@ -146,23 +105,3 @@ This is where you can configure your node's Wifi settings, if it supports Wifi a
 Please note that this will DISABLE your node's Bluetooth connectivity! If for any reason you can't connect to your node via Wifi after enabling this option, you will have to use a serial connection (via USB) to reconfigure it.
 
 It is recommended to disable 'UDP Config' if you have 2 or more nodes connected to ther same network, users have found it to be unreliable.
-
----
-
-# Display
-
-This is where you can configure your node's display, if it has one.
-
-#### Notes
-
-If you do not use the display constantly, setting 'Screen on for' / 'Screen timeout' to a shorter interval can optimize battery life and the preserve the display itself.
-
----
-
-# Telemetry
-
-This is where you can configure your node's telemetry transmissions.
-
-#### Notes
-
-If your node has a battery, we suggest enabling telemetry and setting the transmission interval to around 900 seconds. This will allow you (and others on the mesh) to see your node's battery level from afar.

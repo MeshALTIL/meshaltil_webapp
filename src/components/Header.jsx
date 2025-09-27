@@ -2,12 +2,15 @@ import { useLocation } from 'preact-iso'
 
 export function Header() {
     const { url } = useLocation()
-
+    const base = '/meshtastic_alt_il/'
     return (
         <header>
             <nav>
-                <a href="/" class={url == '/' && 'active'}>
-                    Home
+                <a href={`${base}`} class={url == `${base}` && 'active'}>
+                    Basic Settings
+                </a>
+                <a href={`${base}advanced`} class={url == `${base}advanced` && 'active'}>
+                    Advanced Settings
                 </a>
             </nav>
         </header>

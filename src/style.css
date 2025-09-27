@@ -24,8 +24,11 @@ body {
 }
 
 header {
+	position: fixed;
+	width: 100%;
+	left:0;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	background-color: #60df8c;
 }
 
@@ -34,7 +37,7 @@ header nav {
 }
 
 header a {
-	color: #fff;
+	color: #000000;
 	padding: 0.75rem;
 	text-decoration: none;
 }
@@ -86,9 +89,13 @@ main {
 
 
 main .content{
+
 	text-align: left;
 }
 
+.content_wrapper{
+	padding-top: 2rem;
+}
 
 @media (max-width: 639px) {
 	main {
