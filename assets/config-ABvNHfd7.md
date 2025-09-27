@@ -96,6 +96,7 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 #### Settings
 
 -   **Enable 'MQTT Enabled'** If you wish to connect to other nodes outside your node's range over MQTT (Recommended).
+
 -   **Address:** mesh.theldti.com (Dedicated MQTT server)
 -   **Username:** mesh
 -   **Password:** mesh123
