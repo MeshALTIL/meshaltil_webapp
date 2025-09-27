@@ -24,7 +24,13 @@ Israel's calender does not directly translate to POSIX time zones, this is an ap
 
 # Channels
 
+#### Settings
+
 Please import our channels from the following [URL](https://meshtastic.org/e/#ChUSAQAaCE9wZW5Db21tKAEwAToCCA4KMxIgApNROuCF0HivXWIfr37NLQotpk5lR4IstaO7s8ZP0gEaC2dlc2hlbWthdmVkKAEwAQoyEiAtb9BaS0k_TtWDrBCmUs7oRUXTw5l63D_ErbA5egua2xoKTWVzaEFsdC1JTCgBMAEKMxIgkX6TnnQ3LSg2y2_GJcK3tmz4xn8-Yl2IBOD71NpVJIoaC0VtcmdDb21tLUlMKAEwARIRCAE4AUADSAFQDFgXaAHABgE)
+
+#### Notes
+
+If you are using our dedicated MQTT server, disable both uplink and downlink for every channel--unless your node cannot connect directly to other nodes in the mesh. This reduces load on our server and ensures that only nodes that truly need MQTT use it.
 
 ---
 
@@ -95,10 +101,13 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 
 #### Settings
 
--   **Enable 'MQTT Enabled'** If you wish to connect to other nodes outside your node's range over MQTT (Recommended).
-
+-   **Enable 'MQTT Enabled'** If you wish to connect to other nodes outside your node's range over MQTT.
 -   **Address:** mesh.theldti.com (Dedicated MQTT server)
+
+    -   Only enable uplink and downlink for a channel (in the 'Channels' settings) if your node cannot connect directly to other nodes in the mesh.
+
 -   **Username:** mesh
+
 -   **Password:** mesh123
 -   **Enable 'Encryption Enabled'**
 -   **Enable 'JSON Output Enabled'**
