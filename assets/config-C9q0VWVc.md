@@ -89,10 +89,6 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 
     -   Disable to allow device to receieve messages via MQTT. Enable to ignore messages from MQTT users.
 
-#### Notes
-
--   **Ignore 'TLS Enabled'** as it does not work with many devices.
-
 ---
 
 # MQTT (Module Configuraton)
@@ -100,9 +96,9 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 #### Settings
 
 -   **Enable 'MQTT Enabled'** If you wish to connect to other nodes outside your node's range over MQTT (Recommended).
--   **Address:** mqtt.meshtastic.org (Meshtastic's default MQTT)
--   **Username:** meshdev (Leave as is)
--   **Password:** large4cats (Leave as is)
+-   **Address:** mesh.theldti.com (Dedicated MQTT server)
+-   **Username:** mesh
+-   **Password:** mesh123
 -   **Enable 'Encryption Enabled'**
 -   **Enable 'JSON Output Enabled'**
     -   If your node's firmware supports it (NRF based nodes do not support this option).
@@ -115,7 +111,9 @@ Please set the GPS update Interval to something sensible, between 300 to 900 (se
 
 #### Notes
 
-Due to Meshtastic's MQTT zero-hop policy, we are working on setting up a dedicated MQTT server.
+**Ignore 'TLS Enabled'** as it does not work with many devices.
+
+Due to Meshtastic's MQTT zero-hop policy, we have moved on to our own dedicated MQTT server.
 
 ---
 
