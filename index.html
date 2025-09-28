@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/meshtastic_alt_il/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="color-scheme" content="light dark" />
-		<title>Meshtastic ALT IL</title>
-		<script type="module" crossorigin src="/meshtastic_alt_il/assets/index-C51XoKfF.js"></script>
-		<link rel="stylesheet" crossorigin href="/meshtastic_alt_il/assets/index-BK8vS3KO.css">
-	</head>
-	<body>
-		<div id="app"></div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/meshtastic_alt_il/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="light dark" />
+        <title>Meshtastic ALT IL</title>
+      <script type="module" crossorigin src="/meshtastic_alt_il/assets/index-C51XoKfF.js"></script>
+      <link rel="stylesheet" crossorigin href="/meshtastic_alt_il/assets/index-BK8vS3KO.css">
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="text/javascript">
+            // SPA GitHub Pages path restoration script
+            ;(function (l) {
+                if (l.search[1] === '/') {
+                    var decoded = l.search
+                        .slice(1)
+                        .split('&')
+                        .map(function (s) {
+                            return s.replace(/~and~/g, '&')
+                        })
+                        .join('?')
+                    window.history.replaceState(
+                        null,
+                        null,
+                        l.pathname.slice(0, -1) + decoded + l.hash
+                    )
+                }
+            })(window.location)
+        </script>
+
+    </body>
 </html>
