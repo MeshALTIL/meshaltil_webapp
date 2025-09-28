@@ -5,9 +5,9 @@
         <title>Redirecting…</title>
         <script>
             ;(function () {
-                let l = window.location
-                let baseEl = document.querySelector && document.querySelector('base')
-                let base = (baseEl && baseEl.getAttribute('href')) || '/'
+                var l = window.location
+                var baseEl = document.querySelector && document.querySelector('base')
+                var base = (baseEl && baseEl.getAttribute('href')) || '/'
 
                 if (base.charAt(0) !== '/') base = '/' + base
                 if (base.charAt(base.length - 1) !== '/') base = base + '/'
@@ -18,7 +18,7 @@
                     }
                 }
 
-                let original = l.pathname
+                var original = l.pathname
                 if (original.indexOf(base) === 0) {
                     original = original.slice(base.length)
                 } else {
@@ -26,8 +26,8 @@
                 }
 
                 original = original.replace(/\/$/, '')
-                let search = l.search ? '&' + l.search.slice(1).replace(/\?/g, '~and~') : ''
-                let redirect =
+                var search = l.search ? '&' + l.search.slice(1).replace(/\?/g, '~and~') : ''
+                var redirect =
                     l.protocol +
                     '//' +
                     l.host +
