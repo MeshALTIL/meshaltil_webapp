@@ -11,10 +11,20 @@
     </head>
     <body>
         <div id="app"></div>
-        <script type="text/javascript">
-            // SPA GitHub Pages path restoration script
-            ;(function (l) {
-                if (l.search[1] === '/') {
+        <script>
+            ;(function () {
+                var l = window.location
+
+                // read base from <base> if present (recommended)
+                var baseEl = document.querySelector && document.querySelector('base')
+                var base = (baseEl && baseEl.getAttribute('href')) || '/'
+                if (base.charAt(0) !== '/') base = '/' + base
+                if (base.charAt(base.length - 1) !== '/') base = base + '/'
+
+                // If we were redirected by the 404 handler, search will start with '/':
+                // location.search === "?/path/to/page"
+                if (l.search && l.search[1] === '/') {
+                    // recover the original path (reverse the ~and~ substitution)
                     var decoded = l.search
                         .slice(1)
                         .split('&')
@@ -22,13 +32,18 @@
                             return s.replace(/~and~/g, '&')
                         })
                         .join('?')
-                    window.history.replaceState(
-                        null,
-                        null,
-                        l.pathname.slice(0, -1) + decoded + l.hash
-                    )
+
+                    // decoded is like "/about" or "path/to/page"
+                    // build new path = base + decoded (ensure slashes correct)
+                    var cleanDecoded = decoded.replace(/^\/+/, '') // remove leading slash
+                    var newPath =
+                        (base === '/' ? '/' : base.replace(/\/$/, '')) + '/' + cleanDecoded
+                    newPath = newPath.replace(/\/\/+/g, '/') // collapse accidental double slashes
+
+                    // set URL without reloading, before router mounts
+                    window.history.replaceState(null, '', newPath + l.hash)
                 }
-            })(window.location)
+            })()
         </script>
 
     </body>
