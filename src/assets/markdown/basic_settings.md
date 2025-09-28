@@ -32,7 +32,8 @@ Israel's calender does not directly translate to POSIX time zones, this is an ap
 
 #### Settings
 
-Please import our channels from the following [URL](https://meshtastic.org/e/#ChUSAQAaCE9wZW5Db21tKAEwAToCCA4KMxIgApNROuCF0HivXWIfr37NLQotpk5lR4IstaO7s8ZP0gEaC2dlc2hlbWthdmVkKAEwAQoyEiAtb9BaS0k_TtWDrBCmUs7oRUXTw5l63D_ErbA5egua2xoKTWVzaEFsdC1JTCgBMAEKMxIgkX6TnnQ3LSg2y2_GJcK3tmz4xn8-Yl2IBOD71NpVJIoaC0VtcmdDb21tLUlMKAEwARIRCAE4AUADSAFQDFgXaAHABgE)
+Please import our channels from the following [URL](https://meshtastic.org/e/#ChESAQAaCE9wZW5Db21tOgIIEAovEiACk1E64IXQeK9dYh-vfs0tCi2mTmVHgiy1o7uzxk_SARoLZ2VzaGVta2F2ZWQKLhIgLW_QWktJP07Vg6wQplLO6EVF08OZetw_xK2wOXoLmtsaCk1lc2hBbHQtSUwKLxIgkX6TnnQ3LSg2y2_GJcK3tmz4xn8-Yl2IBOD71NpVJIoaC0VtcmdDb21tLUlMEhEIATgBQAdIAVAeWEZoAcgGAQ
+)
 
 ---
 
