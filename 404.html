@@ -2,42 +2,25 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Redirecting…</title>
-        <script>
-            ;(function () {
-                var l = window.location
-                var baseEl = document.querySelector && document.querySelector('base')
-                var base = (baseEl && baseEl.getAttribute('href')) || '/'
-
-                if (base.charAt(0) !== '/') base = '/' + base
-                if (base.charAt(base.length - 1) !== '/') base = base + '/'
-                if (base === '/') {
-                    var parts = l.pathname.split('/')
-                    if (parts.length > 2 && parts[1]) {
-                        base = '/' + parts[1] + '/'
-                    }
-                }
-
-                var original = l.pathname
-                if (original.indexOf(base) === 0) {
-                    original = original.slice(base.length)
-                } else {
-                    original = original.replace(/^\/+/, '')
-                }
-
-                original = original.replace(/\/$/, '')
-                var search = l.search ? '&' + l.search.slice(1).replace(/\?/g, '~and~') : ''
-                var redirect =
-                    l.protocol +
+        <title>Redirecting...</title>
+        <script type="text/javascript">
+            // SPA GitHub Pages redirect script
+            var segmentCount = 1
+            var l = window.location
+            l.replace(
+                l.protocol +
                     '//' +
-                    l.host +
-                    base +
-                    '?/' +
-                    encodeURIComponent(original).replace(/%2F/g, '/') +
-                    search +
+                    l.hostname +
+                    (l.port ? ':' + l.port : '') +
+                    l.pathname
+                        .split('/')
+                        .slice(0, 1 + segmentCount)
+                        .join('/') +
+                    '/?/' +
+                    l.pathname.slice(1).replace(/\/$/, '') +
+                    (l.search ? '&' + l.search.slice(1).replace(/\?/g, '~and~') : '') +
                     l.hash
-                l.replace(redirect)
-            })()
+            )
         </script>
     </head>
     <body></body>
