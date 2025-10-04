@@ -13,7 +13,7 @@ export function Logo({ headline }) {
                 />
             </div>
             <div className="headline">
-                <h1>Meshtastic ALT IL</h1>
+                <h1>Meshtastic Alt IL Community</h1>
                 <h2>{headline}</h2>
             </div>
         </div>
