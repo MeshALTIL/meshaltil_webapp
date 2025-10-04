@@ -1,4 +1,4 @@
-import logo from '../assets/meshtastic.svg'
+import logo from '../assets/M-POWERED.svg'
 
 export function Logo({ headline }) {
     return (
