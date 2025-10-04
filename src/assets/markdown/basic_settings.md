@@ -106,3 +106,10 @@ This is where you can configure your node's Wifi settings, if it supports Wifi a
 Please note that this will DISABLE your node's Bluetooth connectivity! If for any reason you can't connect to your node via Wifi after enabling this option, you will have to use a serial connection (via USB) to reconfigure it.
 
 It is recommended to disable 'UDP Config' if you have 2 or more nodes connected to ther same network, users have found it to be unreliable.
+
+
+
+---
+Meshtastic® is a registered trademark of Meshtastic LLC. 
+Meshtastic software components are released under various licenses, see GitHub for details. 
+No warranty is provided - use at your own risk.
