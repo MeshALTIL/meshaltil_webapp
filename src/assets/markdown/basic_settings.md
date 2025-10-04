@@ -32,8 +32,7 @@ Israel's calender does not directly translate to POSIX time zones, this is an ap
 
 #### Settings
 
-Please import our channels from the following [URL](https://meshtastic.org/e/#ChESAQAaCE9wZW5Db21tOgIIEAovEiACk1E64IXQeK9dYh-vfs0tCi2mTmVHgiy1o7uzxk_SARoLZ2VzaGVta2F2ZWQKLhIgLW_QWktJP07Vg6wQplLO6EVF08OZetw_xK2wOXoLmtsaCk1lc2hBbHQtSUwKLxIgkX6TnnQ3LSg2y2_GJcK3tmz4xn8-Yl2IBOD71NpVJIoaC0VtcmdDb21tLUlMEhEIATgBQAdIAVAeWEZoAcgGAQ
-)
+Please import our channels from the following [URL](https://meshtastic.org/e/#ChESAQAaCE9wZW5Db21tOgIIEAovEiACk1E64IXQeK9dYh-vfs0tCi2mTmVHgiy1o7uzxk_SARoLZ2VzaGVta2F2ZWQKLhIgLW_QWktJP07Vg6wQplLO6EVF08OZetw_xK2wOXoLmtsaCk1lc2hBbHQtSUwKLxIgkX6TnnQ3LSg2y2_GJcK3tmz4xn8-Yl2IBOD71NpVJIoaC0VtcmdDb21tLUlMEhEIATgBQAdIAVAeWEZoAcgGAQ)
 
 ---
 
@@ -107,9 +106,10 @@ Please note that this will DISABLE your node's Bluetooth connectivity! If for an
 
 It is recommended to disable 'UDP Config' if you have 2 or more nodes connected to ther same network, users have found it to be unreliable.
 
-
-
 ---
-Meshtastic® is a registered trademark of Meshtastic LLC. 
-Meshtastic software components are released under various licenses, see GitHub for details. 
+
+# Meshtastic Statement
+
+Meshtastic® is a registered trademark of Meshtastic LLC.
+Meshtastic software components are released under various licenses, see [GitHub](https://github.com/meshtastic/meshtastic) for details.
 No warranty is provided - use at your own risk.
