@@ -5,7 +5,7 @@ export function NotFound() {
 
     useEffect(() => {
         setInterval(() => setEllipsis(e => e + 1), 300)
-        setTimeout(() => (window.location.href = '/meshtastic_alt_il/'), 2000)
+        setTimeout(() => (window.location.href = '/webapp/'), 2000)
     }, [])
 
     return (

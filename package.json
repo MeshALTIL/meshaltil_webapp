@@ -1,7 +1,7 @@
 {
     "private": true,
     "type": "module",
-    "homepage": "https://meshaltil.github.io/",
+    "homepage": "https://meshaltil.github.io/webapp/",
     "scripts": {
         "dev": "vite",
         "build": "vite build",

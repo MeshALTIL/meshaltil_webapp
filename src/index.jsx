@@ -12,8 +12,8 @@ export function App() {
         <LocationProvider>
             <main>
                 <Router>
-                    <Route path="/meshtastic_alt_il/" component={BasicSettings} />
-                    <Route path="/meshtastic_alt_il/advanced" component={AdvancedSettings} />
+                    <Route path="/webapp/" component={BasicSettings} />
+                    <Route path="/webapp/advanced" component={AdvancedSettings} />
                     <Route default component={NotFound} />
                 </Router>
             </main>

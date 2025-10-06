@@ -2,7 +2,7 @@ import { useLocation } from 'preact-iso'
 
 export function Header() {
     const { url } = useLocation()
-    const base = '/meshtastic_alt_il/'
+    const base = '/webapp/'
     return (
         <header>
             <nav>
